@@ -1,4 +1,4 @@
-Repozatorija faila apraksti
+Failu apraksti:
 
 TesterApp - šeit atrodas viss palīgrīka kods un tā pārējie resursi.
 TesterAppAutomationTesting - kods ar kura palīdzību tika veikti automatizētie testi ,lai pārbaudītu palīgrīka darbību.
