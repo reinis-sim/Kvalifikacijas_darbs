@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="test_status">
+        <item>PASSED</item>
+        <item>FAILED</item>
+        <item>NOT_EXECUTED</item>
+    </string-array>
+</resources>

@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/page_title"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/add_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.7"
+            android:gravity="bottom|left"
+            android:text="Create test step"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/add_step_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="center_vertical"
+            android:text="ADD STEP"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:backgroundTint="@color/light_green"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/page_title"
+        android:id="@+id/step_title_lay"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/step_title"
+            android:text="Step"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_marginTop="16dp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/step_title_text"
+            android:hint="Step"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/step_title"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/white"
+            android:maxLength="300"/>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/step_title_lay"
+        android:id="@+id/test_data_lay">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/test_data"
+            android:text="Test Data"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_marginTop="16dp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/test_data_text"
+            android:hint="Test data"
+            android:minLines="3"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:layout_below="@+id/test_data"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/white"
+            android:maxLength="500"/>
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/test_data_lay"
+        android:id="@+id/expected_result_lay"
+
+        >
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expected_result"
+            android:text="Expected result"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_marginTop="16dp"
+
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expected_result_text"
+            android:hint="Expected result"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:layout_below="@+id/expected_result"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/white"
+            android:maxLength="300"/>
+
+
+
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/expected_result_lay"
+        android:id="@+id/sms_lay"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/switch_text_view"
+            android:text="Contains SMS message: "
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="left"
+            android:layout_marginTop="16dp"
+
+            />
+
+
+        <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sms_switch"
+            android:paddingTop="10dp"
+            android:layout_below="@id/switch_text_view">
+        </Switch>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sms_sender_text"
+            android:hint="Sender ID"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/white"
+            android:layout_below="@id/sms_switch"
+            android:maxLength="30"
+            android:visibility="gone"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sms_msg_text"
+            android:hint="Message"
+            android:minLines="10"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginVertical="8dp"
+            android:padding="12dp"
+            android:gravity="top"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_corner"
+            android:backgroundTint="@color/white"
+            android:layout_below="@id/sms_sender_text"
+            android:scrollbars="vertical"
+            android:visibility="gone"
+            android:maxLength="300"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+</ScrollView>

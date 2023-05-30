@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_primary">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        tools:context=".MainActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/page_title"
+            >
+
+            <TextView
+                android:id="@+id/create_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Case details"
+                android:textColor="@color/white"
+                android:textSize="32sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/page_title"
+            android:id="@+id/case_title_lay">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/case_title"
+                android:text="Title"
+                android:textSize="26sp"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/page_title_text"
+                android:hint="Title"
+                android:textSize="20sp"
+
+                android:layout_marginVertical="8dp"
+                android:paddingTop="12dp"
+                android:textColor="@color/charcoal"
+                android:layout_below="@+id/case_title"
+                android:backgroundTint="@color/white"/>
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/case_title_lay"
+            android:id="@+id/case_precon_lay">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/case_precon"
+                android:text="Precondition"
+                android:textSize="26sp"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginTop="16dp"
+
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/page_precon_text"
+                android:hint="Precondition"
+                android:textSize="20sp"
+                android:layout_marginVertical="8dp"
+                android:paddingTop="12dp"
+                android:gravity="top"
+                android:textColor="@color/charcoal"
+                android:layout_below="@+id/case_precon"
+                android:backgroundTint="@color/white"/>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/case_precon_lay"
+            android:id="@+id/app_version_lay"
+
+            >
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/app_version"
+                android:text="Build version"
+                android:textSize="26sp"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/page_version_text"
+                android:hint="Version"
+                android:textSize="20sp"
+                android:layout_marginVertical="8dp"
+                android:paddingTop="12dp"
+                android:gravity="top"
+                android:textColor="@color/charcoal"
+                android:layout_below="@+id/app_version">
+
+            </TextView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/app_version_lay"
+            android:id="@+id/app_test_steps_lay">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/test_step_title"
+                android:text="Test steps"
+                android:textSize="26sp"
+                android:textColor="@color/dark_green"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:layout_marginTop="16dp"
+
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/test_step_title"
+                android:id="@+id/recycler_view_steps"
+                />
+
+        </RelativeLayout>
+        <Button
+            android:layout_below="@id/app_test_steps_lay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Delete test case"
+            android:backgroundTint="#D64747"
+            android:layout_centerInParent="true"
+            android:id="@+id/dlt_case_btn">
+
+        </Button>
+
+    </RelativeLayout>
+</ScrollView>
